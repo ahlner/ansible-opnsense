@@ -64,6 +64,10 @@ def run_module():
                         'their payload (e.g. some game consoles needing NAT '
                         'type B/Open).'
         ),
+        categories=dict(
+            type='list', elements='str', required=False, default=[],
+            description='List of firewall rule categories by display name'
+        ),
         match_fields=dict(
             type='list', required=True, elements='str',
             description='Fields that are used to match configured rules with the running config - '
